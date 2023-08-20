@@ -4,7 +4,7 @@
 # https://sethforprivacy.com/guides/run-a-monero-node/#recommended-hardware
 
 nala install -y bzip2
-mkdir /root/bin
+mkdir /bin/monerod
 
 # creates system user account for monero service
 adduser --system --group --no-create-home monero
@@ -40,7 +40,7 @@ ufw enable
 
 # Folder locations, please change as needed:
 TMP=/tmp    # Folder (without trailing slash) where files are downloaded to.
-DEST=~/bin  # Destination (without trailing slash) where we will install.
+DEST=/bin/monerod  # Destination (without trailing slash) where we will install.
 
 # File containing release hashes.  This tells us the version number as well:
 HASHES_URL='https://www.getmonero.org/downloads/hashes.txt'
@@ -234,7 +234,7 @@ fi
 echo -e "\nDONE."
 
 
-cp monerod.conf ../bin/${NEW_VERSION_FOLDER}/monerod.conf
+cp monerod.conf /bin/monerod/${NEW_VERSION_FOLDER}/monerod.conf
 cp monerod.service /etc/systemd/system/monerod.service
 
 systemctl daemon-reload
