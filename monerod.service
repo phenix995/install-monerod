@@ -6,7 +6,7 @@ After=network.target
 [Service]
 Type=forking
 PIDFile=/var/lib/monero/monerod.pid
-ExecStart=/bin/monerod/monero-v*/monerod --config-file /bin/monerod/monero-v*/monerod.conf --detach --pidfile /var/lib/monero/monerod.pid
+ExecStart=/bin/monerod/monero-v/monerod --config-file /bin/monerod/monero-v/monerod.conf --detach --pidfile /var/lib/monero/monerod.pid
 User=monero
 Group=monero
 Restart=always

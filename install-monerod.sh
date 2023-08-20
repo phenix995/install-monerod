@@ -237,7 +237,7 @@ echo -e "\nDONE."
 cp ~/install-monerod/monerod.conf /bin/monerod/${NEW_VERSION_FOLDER}/monerod.conf
 cp ~/install-monerod/monerod.service /etc/systemd/system/monerod.service
 
-sed -i "s/monero-v*/${NEW_VERSION_FOLDER}/g" /etc/systemd/system/monerod.service
+sed -i "s/monero-v/${NEW_VERSION_FOLDER}/g" /etc/systemd/system/monerod.service
 
 systemctl daemon-reload
 systemctl enable monerod
