@@ -4,7 +4,6 @@
 # https://sethforprivacy.com/guides/run-a-monero-node/#recommended-hardware
 
 nala install -y bzip2
-git clone https://github.com/phenix995/monerod_config_file.git ../monerod_config_file
 mkdir /root/bin
 
 # creates system user account for monero service
