@@ -235,8 +235,8 @@ echo -e "\nDONE."
 
 awk '{gsub(/monero-v*/, '${NEW_VERSION_FOLDER}'); print}' monerod.service > monerod.service
 
-cp ../monerod_config_file/monerod.conf ../bin/${NEW_VERSION_FOLDER}/monerod.conf
-cp ../monerod_config_file/monerod.service /etc/systemd/system/monerod.service
+cp monerod.conf ../bin/${NEW_VERSION_FOLDER}/monerod.conf
+cp monerod.service /etc/systemd/system/monerod.service
 
 systemctl daemon-reload
 systemctl enable monerod
