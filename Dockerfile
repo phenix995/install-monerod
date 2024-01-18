@@ -1,4 +1,4 @@
-# Use a Debian base image
+# Use a Ubuntu base image
 FROM ubuntu:noble
 
 # Install Monero from the Debian repository
