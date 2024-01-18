@@ -1,5 +1,5 @@
 # Use a Debian base image
-FROM ubuntu:latest
+FROM ubuntu:noble
 
 # Install Monero from the Debian repository
 RUN apt-get update && apt-get install -y monero && rm -rf /var/lib/apt/lists/*
