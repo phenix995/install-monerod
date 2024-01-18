@@ -15,7 +15,7 @@ COPY monerod.conf /usr/bin/monerod.conf
 RUN mkdir -p /var/lib/monero && chown -R monero:monero /var/lib/monero
 
 # Set the entrypoint to monerod with the specified configuration
-ENTRYPOINT ["/usr/bin/monerod", "--config-file", "/usr/bin/monerod.conf", "--pidfile", "/var/lib/monero/monerod.pid"]
+ENTRYPOINT ["/usr/bin/monerod","--non-interactive", "--config-file", "/usr/bin/monerod.conf", "--pidfile", "/var/lib/monero/monerod.pid"]
 
 # Expose necessary ports
 EXPOSE 18080 18089
